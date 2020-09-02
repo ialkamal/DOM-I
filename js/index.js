@@ -152,3 +152,25 @@ let login = document.createElement("a");
 login.textContent = "Log In";
 login.href = "#";
 navItems.appendChild(login);
+
+//Stretch - Change Random styles
+let textContent = document.querySelectorAll(".text-content");
+textContent.forEach((el) => {
+  el.style.color = "red";
+  el.style.fontSize = "1.5rem";
+});
+
+middleImg.style.borderRadius = "25px";
+
+//Stretch - Add event listener to button
+btn.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  logo.style.display === "none"
+    ? (logo.style.display = "block")
+    : (logo.style.display = "none");
+
+  h1Tag.style.color === "blue"
+    ? (h1Tag.style.color = "black")
+    : (h1Tag.style.color = "blue");
+});
