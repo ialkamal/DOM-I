@@ -27,12 +27,18 @@ function displayTimer() {
   let time = 10;
   return function () {
     timeString = time.toString().split("");
-    if (timeString.length === 2)
+    if (timeString.length === 2) {
+      document.getElementById("secondTens").textContent = 0;
+      document.getElementById("secondOnes").textContent = 0;
+      document.getElementById("msHundreds").textContent = 0;
       document.getElementById("msTens").textContent = timeString[0];
-    else if (timeString.length === 3) {
+    } else if (timeString.length === 3) {
+      document.getElementById("secondTens").textContent = 0;
+      document.getElementById("secondOnes").textContent = 0;
       document.getElementById("msHundreds").textContent = timeString[0];
       document.getElementById("msTens").textContent = timeString[1];
     } else if (timeString.length === 4) {
+      document.getElementById("secondTens").textContent = 0;
       document.getElementById("secondOnes").textContent = timeString[0];
       document.getElementById("msHundreds").textContent = timeString[1];
       document.getElementById("msTens").textContent = timeString[2];
